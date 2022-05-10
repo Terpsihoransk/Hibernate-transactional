@@ -39,42 +39,7 @@ public class UserDaoImp implements UserDao {
 
 }
 
-/*    @Override
-   public findUserByCar(){
-      Query query = sessionFactory.getCurrentSession().createQuery("SELECT FROM User WHERE car=:car");
-      query.setParameter("car", car);
-      return (User) query.getSingleResult();
-   }
 
- типизированный запрос (без приведения типов через TypedQuery
-   public Car findUserByCar(Long id) {
-    TypedQuery<UserEntity> typedQuery
-      = getEntityManager().createQuery("SELECT FROM User WHERE model=:model", Car.class);
-    typedQuery.setParameter("model", model);
-    return typedQuery.getSingleResult();
-}
- */
-
-
-
-//   @Override
-//   public void createCarTable(Car car) {
-//      sessionFactory.getCurrentSession().save(car);
-//   }
-
-   // нужна аннотация @Transactional
-//   @Override
-//   @SuppressWarnings("unchecked")
-//   public List<Car> listCar()() {
-//      Query query = sessionFactory.getCurrentSession().createQuery("from Car a where a.id = :id");
-//      query.setParameter("id", id);
-//      return query.getResultList();
-//   }
-
-   // нужен метод, hql достаёт юзера с машиной по модели и серии
-   // типизация. юзера ищем по Car. не executeUpdate , а getSingleResult()
-   // использовать модель и серию, то в запросе ставьте and
-   // обычный from и where. Кто-то через INNER JOIN (см.статью про hql)
 
 
 

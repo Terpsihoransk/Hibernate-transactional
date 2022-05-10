@@ -27,7 +27,7 @@ public class UserServiceImp implements UserService {
       return userDao.listUsers();
    }
 
-   @Transactional
+   @Transactional(readOnly = true)
    @Override
    public User getUserByCar(String model, int series)  {
       return userDao.getUserByCar(model, series);
@@ -35,19 +35,5 @@ public class UserServiceImp implements UserService {
 }
 
 
-//   @Transactional
-//   @Override
-//   public void add(Car car) { userDao.add(car); }
-//
-//   @Transactional(readOnly = true)
-//   @Override
-//   public List<Car> listCar() {
-//      return userDao.listCar();
-//   }
-
-   // нужен метод, hql достаёт юзера с машиной по модели и серии
-   // типизация. юзера ищем по Car. не executeUpdate , а getSingleResult()
-   // использовать модель и серию, то в запросе ставьте and
-   // обычный from и where
 
 
